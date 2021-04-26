@@ -14,12 +14,19 @@
 # Send me the solution privately so the others don't copy it
 # You can take this code as a base and complete it:
 # https://dotnetfiddle.net/mwzSZ4
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Se voglio una lista di 13 unita generate randomicamente, uso il modulo random #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# import random
+# Matrice_random= []   creo la lista vuota che conterra i 13 numeri generati dal for successivo 
+# for i in range(1,13):
+#     Matrice_random.append(random.randrange(1,100)) # Riempio la lista per 13 volte con dei numeri randomici 
 
 Matrice =[11,7,42, 7,3,8,5,48,24,45,32,21]
 Riferimento = 25
-
 DictOutput = []
-for n,v in enumerate(Matrice):
+
+for n,v in enumerate(Matrice): #cambiare con Matrice_random se si vuole usare una lista casuale
     if v >Riferimento:
         n = v - Riferimento
         DictOutput.append([n,v])
@@ -28,12 +35,11 @@ for n,v in enumerate(Matrice):
         DictOutput.append([n,v]) 
     elif v == Riferimento:
         DictOutput.append([1,v]) 
-        print("Numero uguale")
     else:
         print("Error")
 
 nuova_dict = sorted(DictOutput[:])
-# print(nuova_dict)
+
 sorted_list_output = []
 for k,v in sorted(DictOutput[:]):
     sorted_list_output.append(v)
